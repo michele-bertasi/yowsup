@@ -1,0 +1,32 @@
+To register a new client
+------------------------
+
+Make a config.cfg file like:
+
+cc=39
+phone=391234567890  # phone including country code
+id=1234567          # some random number (not important)
+
+Get the registration code by sms:
+
+./yowsup-cli -c config.cfg --requestcode sms
+
+Read the request code in the sms sent by whatsapp and confirm the registration:
+
+./yowsup-cli -c config.cfg --register 123-456
+
+In the answer read the password in the line:
+
+pw: I/ijKHt+0klXTrJ97g0PqPlJ3/s=
+
+and add it in the config file:
+
+
+cc=39
+phone=391234567890  # phone including country code
+id=1234567          # some random number (not important)
+password=I/ijKHt+0klXTrJ97g0PqPlJ3/s=
+
+Then, to send a message:
+
+./yowsup-cli -c config.cfg -s 399876543210 "Some message!"

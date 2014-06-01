@@ -88,6 +88,7 @@ class WhatsappEchoClient:
 
 	def onAuthFailed(self, username, err):
 		print("Auth Failed!")
+                self.done = True
 
 	def onDisconnected(self, reason):
 		print("Disconnected because %s" %reason)

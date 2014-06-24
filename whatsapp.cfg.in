@@ -1,0 +1,4 @@
+cc=${CC}
+phone=${SRC_PHONE}
+id=92857341
+password=${PWD}
